@@ -1,0 +1,60 @@
+:root {
+    --color_verde_fondo: #F1F2ED;
+    --color_blanco: #ffffff;
+    --verde_fuerte: #4D7839;
+    --verde_claro: #A1BF36;
+    --color_verde_hover: #87a12c;
+}
+
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 1em;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: var(--color_verde_fondo);
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos del formulario en columnas */
+    background: var(--verde_fuerte);
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 20px;
+    overflow-y: auto;
+    min-height: min-content; /* Ajusta el tamaño al contenido */
+    width: 50vw; /* Ajusta el ancho al 50% de la ventana */
+}
+
+.input_div {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a nuevas filas */
+    gap: 20px; /* Espacio entre los grupos de inputs */
+    width: 100%; /* Ajusta el contenedor al 100% */
+    margin-bottom: 15px; /* Espacio entre cada conjunto de inputs */
+}
+
+.input_item {
+    display: flex;
+    flex-direction: column; /* Organiza los <p> y <input> en columna */
+    width: 48%; /* El input ocupa la mitad del ancho del contenedor */
+}
+
+.input_item p {
+    margin: 0;
+    font-size: 1em;
+    color: var(--color_blanco);
+}
+
+.input_item input {
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    width: 90%; /* Asegura que el input ocupe todo el ancho disponible */
+}

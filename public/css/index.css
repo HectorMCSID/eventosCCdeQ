@@ -1,0 +1,122 @@
+:root {
+    --color_verde_fondo: #F1F2ED;
+    --color_blanco: #ffffff;
+    --verde_fuerte: #4D7839;
+    --verde_claro: #A1BF36;
+    --color_verde_hover: #87a12c;
+}
+
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 1em;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;   /* Alinea verticalmente */
+    justify-content: center;  /* Alinea horizontalmente */
+    height: 100vh;  /* Asegura que el body tenga el 100% de la altura de la ventana */
+    background: var(--color_verde_fondo);
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.vista_previa_imagen{
+    height: 80%;
+    max-width: 40%;
+    background: var(--color_blanco);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
+
+    /* Alineación del contenido con Flexbox */
+    display: flex;
+    justify-content: center; /* Alinea horizontalmente */
+    align-items: center; 
+}
+
+.vista_previa_imagen img{
+    max-width: 100%;   /* La imagen no se desbordará en ancho */
+    max-height: 100%;  /* La imagen no se desbordará en alto */
+    object-fit: contain;
+}
+
+.vista_previa_informacion{
+    background: var(--color_blanco);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
+    width: 40%;
+    height: 80%;
+    box-sizing: border-box;
+    margin-left: 2.5%;
+}
+.recuadro_scroll{
+    height: 75%;
+    overflow-y: auto;
+}
+.recuadro_titulo{
+    display: flex;
+    background: var(--verde_fuerte);
+    color:var(--color_blanco);
+    padding:20px;
+    box-sizing: border-box;
+    
+}
+.recuadro_titulo h1{
+    width: 92%;
+}
+
+.recuadro_titulo img{
+    width: 8%;
+    height: 8%;
+}
+
+
+.recuadro_informacion{
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.formulario_inicial{
+    display: flex;
+    overflow-y: auto;
+    align-items: center;   /* Alinea verticalmente */
+    background: var(--verde_fuerte);
+    height: 25%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.formulario_inicial div{
+    width: 100%;
+}
+
+.formulario_inicial div h2{
+    color: var(--color_blanco);
+    margin-bottom: 10px;
+}
+.formulario_inicial div select{
+    width: 30%;
+    box-sizing: border-box;
+    padding: 2%;
+    cursor: pointer;
+}
+
+.formulario_inicial div input{
+    width: 38%;
+    box-sizing: border-box;
+    padding: 2%;
+}
+
+.formulario_inicial div button{
+    color: var(--color_blanco);
+    background-color: var(--verde_claro);
+    width: 30%;
+    box-sizing: border-box;
+    padding: 2%;
+    border: none;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.formulario_inicial div button:hover{
+    background: var(--color_verde_hover);
+}

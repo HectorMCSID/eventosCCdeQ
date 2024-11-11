@@ -4,12 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Eventos Camara de comercio de Queretaro</title>
+    
     <link rel="icon" href="<?= base_url('imagenes_pagina/icono_titulo.png') ?>" type="image/x-icon">
+    <link rel="stylesheet" href="<?= base_url('css/index.css') ?>">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        const url_evento_actual = <?= json_encode($url_evento_actual) ?>;
+
+        const url_consultar_direccion_evento = <?= json_encode(base_url('consultar_direccion_evento')); ?>;
+        const url_consultar_existencia_invitado = <?= json_encode(base_url('consultar_existencia_invitado')); ?>;
+        const url_consultar_existencia_empresa = <?= json_encode(base_url('consultar_existencia_empresa')); ?>;
+
+        const url_registrar_invitados = <?= json_encode(base_url('vista_registrar_invitados')); ?>;
+        const url_registrar_empresas = <?= json_encode(base_url('vista_registrar_empresas')); ?>;
+
+    </script>
+
     <script src="<?= base_url('javascript/index_evento.js') ?>"></script>
-</head>
-<body>
     <?php if ($evento): ?>
+            <title><?= html_entity_decode($evento['nombre_evento'], ENT_QUOTES, 'UTF-8')?></title>
+        </head>
+        <body>
         <script>
             const evento = {
                 id: <?= esc($evento['id'], 'js') ?>,
@@ -29,6 +44,9 @@
             crear_formulario_eventos(evento);
         </script>
     <?php else: ?>
+        <title>Eventos Camara de comercio de Queretaro</title>
+        </head>
+        <body>
         <!-- Mostrar un mensaje cuando no se encuentre el evento -->
         <h1>No se encontró el evento.</h1>
     <?php endif; ?>
